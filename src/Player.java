@@ -7,6 +7,7 @@ public abstract class Player {
 	
 	public Player(String myName){
 		myScore = 0;
+		this.myName = myName;
 	}
 	
 	// Each player must provide logic for deciding to roll again
