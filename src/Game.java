@@ -56,8 +56,8 @@ public class Game {
 		printStartRoundMessage(whoseTurn);
 		while(keepGoing){
 			//int roll = die.nextInt(7);
-			//nextInt(7) returns integer from 0 to 6. therefore we need to add 1 to get 1-7.
-			int roll = die.nextInt(7) + 1;
+			//nextInt(7) returns integer from 0 to 6. therefore we need to add 1 to nextInt(6) 6 to get 1-6.
+			int roll = die.nextInt(6) + 1;
 			String spin = spinner.spin();
 			System.out.println((roll)+ " "+ spin);
 			
@@ -81,7 +81,7 @@ public class Game {
 				return 0;
 			}
 			
-			else if(roll == LOSER_ROLL){
+			if(roll == LOSER_ROLL){
 				System.out.println("Lose a turn.");
 				return 0;
 			}
